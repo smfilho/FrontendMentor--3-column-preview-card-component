@@ -1,0 +1,116 @@
+:root {
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --color-white-tranparent1: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+  --color-very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+
+  --font-size: 15px;
+  --font-shoulders: 'Big Shoulders Display', cursive;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+  background-color: var(--color-very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--color-very-light-gray);
+}
+.flex-container {
+  display: flex;
+  max-width: 61.3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  padding: 3.3rem;
+}
+.sedans {
+  background: var(--color-bright-orange);
+}
+.suvs {
+  background: var(--color-dark-cyan);
+}
+.luxury {
+  background: var(--color-very-dark-cyan);
+}
+
+.card img {
+  margin-bottom: 2.5rem;
+}
+.card h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.card p {
+  color: var(--color-white-tranparent1);
+  line-height: 1.5;
+  margin-bottom: 5rem;
+}
+.card-btn {
+  padding: 0.8rem 1.7rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.card:nth-child(1) .card-btn {
+  color: var(--color-bright-orange);
+}
+.card:nth-child(2) .card-btn {
+  color: var(--color-dark-cyan);
+}
+.card:nth-child(3) .card-btn {
+  color: var(--color-very-dark-cyan);
+}
+
+.card:nth-child(1) .card-btn:hover {
+  background-color: var(--color-bright-orange);
+  outline: 2px solid var(--color-very-light-gray);
+  color: var(--color-very-light-gray);
+  transition: 0.3s;
+}
+.card:nth-child(2) .card-btn:hover {
+  background-color: var(--color-dark-cyan);
+  outline: 2px solid var(--color-very-light-gray);
+  color: var(--color-very-light-gray);
+  transition: 0.1s;
+}
+.card:nth-child(3) .card-btn:hover {
+  background-color: var(--color-very-dark-cyan);
+  outline: 2px solid var(--color-very-light-gray);
+  color: var(--color-very-light-gray);
+  transition: 0.1s;
+}
+
+@media (max-width: 55rem) {
+  .flex-container {
+    flex-direction: column;
+    margin: 5rem 1.5rem;
+  }
+  .card {
+    padding: 3.1rem;
+  }
+  .card img,
+  .card p {
+    margin-bottom: 2rem;
+  }
+}
